@@ -9,6 +9,7 @@ concurrency: seqflow-merge
 
 permissions:
   contents: write
+  packages: write
 
 jobs:
   seqflow-merge:
