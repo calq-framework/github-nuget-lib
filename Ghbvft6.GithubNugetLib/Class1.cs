@@ -10,5 +10,8 @@ namespace Ghbvft6.GithubNugetLib
         public String foo2() {
             return "Ghbvft6.GithubNugetLib2";
         }
+        public String foo3() {
+            return "Ghbvft6.GithubNugetLib3";
+        }
     }
 }
