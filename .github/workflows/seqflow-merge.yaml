@@ -27,7 +27,7 @@ jobs:
           PROJECT_DIR=$(dirname $PROJECT_FILE)
           PROJECT_FILE_NAME=$(basename $PROJECT_FILE)
           PROJECT_NAME="${PROJECT_FILE_NAME%.*}"
-          dotnet pack "$PROJECT_FILE" --configuration Release -p:ContinuousIntegrationBuild=true -p:EmbedUntrackedSources=true -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:RepositoryUrl=${{github.repositoryUrl}} -p:RepositoryBranch=$BRANCH_NAME
+          dotnet pack "$PROJECT_FILE" --configuration Release -p:ContinuousIntegrationBuild=true -p:EmbedUntrackedSources=true -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg -p:PublishRepositoryUrl=true -p:RepositoryBranch=$BRANCH_NAME
           WORKING_DIR=$PWD
           cd $PROJECT_DIR/bin/Release
           dotnet nuget push $PROJECT_NAME.$NEW_RELEASE_VERSION.nupkg --source https://nuget.pkg.github.com/${{github.repository_owner}}/index.json --api-key ${{secrets.GITHUB_TOKEN}}
