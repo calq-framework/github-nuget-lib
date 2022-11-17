@@ -30,5 +30,9 @@ namespace Ghbvft6.GithubNugetLib
             throw new SomeException("something");
             return "Ghbvft6.GithubNugetLib6";
         }
+        public String fooerror2() {
+            throw new SomeException("something");
+            return "Ghbvft6.GithubNugetLib6";
+        }
     }
 }
