@@ -2,6 +2,10 @@
 
 namespace Ghbvft6.GithubNugetLib
 {
+    class SomeException : Exception {
+        public SomeException(string? message) : base(message) {
+        }
+    }
     public class Class1
     {
         public String foo() {
@@ -20,6 +24,10 @@ namespace Ghbvft6.GithubNugetLib
             return "Ghbvft6.GithubNugetLib5";
         }
         public String foo6() {
+            return "Ghbvft6.GithubNugetLib6";
+        }
+        public String fooerror() {
+            throw new SomeException("something");
             return "Ghbvft6.GithubNugetLib6";
         }
     }
